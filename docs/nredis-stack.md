@@ -50,9 +50,10 @@ ITimeSeriesCommands ts = db.TS();
 ## JSON Operations
 
 ### Document Storage
-- [**CRUD operations**](../src/Json/DocumentStorage/CrudOperations.cs)
+- [**CRUD operations**](../src/N1_DocumentStorage/CrudOperations.cs)
 - [**Object merging**](../src/Json/DocumentStorage/ObjectMerging.cs)
-- [**Array manipulation**](../src/Json/DocumentStorage/ArrayOperations.cs)
+- [**Array manipulation**](../src/N1_DocumentStorage/ArrayOperations.cs) _Note: Array operations use string without JSON format_
+
 - [**Memory optimization**](../src/Json/DocumentStorage/MemoryOptimization.cs)
 
 ### Document Querying

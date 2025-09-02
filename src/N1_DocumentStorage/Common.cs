@@ -8,6 +8,8 @@ public static class Common
 
     public record UserWithProfile(Guid Id, string Name, string EmailAddress, UserProfile Profile);
 
+    public record UserWithTags(Guid Id, string Name, string[] Tags);
+
     public record Settings(string Theme, string Language);
 
     public record UserWithSettings(Guid Id, string Name, string EmailAddress, Settings Settings);
