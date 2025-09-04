@@ -1,34 +1,29 @@
-using NRedisStack.RedisStackCommands;
-using StackExchange.Redis;
+using NRedisStack;
 
 namespace N1_DocumentStorage;
 
 public static class ArrayOperations
 {
-    public static async ValueTask RunExampleAsync()
+    public static async ValueTask RunExampleAsync(JsonCommands jsonCommands)
     {
         Console.WriteLine("\n\n----------  Array Operations example  ----------");
 
-        var conf = new ConfigurationOptions { EndPoints = { "localhost:6379" } };
-        await using var redis = await ConnectionMultiplexer.ConnectAsync(conf);
-        var json = redis.GetDatabase().JSON();
-
-        var user = new Common.UserWithTags(Guid.CreateVersion7(), "Alice", ["developer", "reviewer"]);
+        var user = new Common.UserWithTags(Guid.CreateVersion7(), "Alice", 30, ["developer", "reviewer"]);
         var key = $"user:{user.Id}";
-        await json.SetAsync(key, "$", user);
-        Console.WriteLine($"Created user with tags: {await json.GetAsync(key)}");
+        await jsonCommands.SetAsync(key, "$", user);
+        Console.WriteLine($"Created user with tags: {await jsonCommands.GetAsync(key)}");
 
         // Append an element to the array
-        await json.ArrAppendAsync(key, "$.Tags", "architecht");
-        Console.WriteLine($"After appending 'architect' : {await json.GetAsync(key)}");
+        await jsonCommands.ArrAppendAsync(key, "$.Tags", "architecht");
+        Console.WriteLine($"After appending 'architect' : {await jsonCommands.GetAsync(key)}");
 
         // Get the length of the array
-        var length = await json.ArrLenAsync(key, "$.Tags");
+        var length = await jsonCommands.ArrLenAsync(key, "$.Tags");
         Console.WriteLine($"New array length: {length[0]}");
 
         // Remove the last element from the array
-        var poppedValue = await json.ArrPopAsync(key, "$.Tags");
+        var poppedValue = await jsonCommands.ArrPopAsync(key, "$.Tags");
         Console.WriteLine($"Popped value: {poppedValue[0]}");
-        Console.WriteLine($"After popping: {await json.GetAsync(key, ["$.Tags"])}");
+        Console.WriteLine($"After popping: {await jsonCommands.GetAsync(key, ["$.Tags"])}");
     }
 }

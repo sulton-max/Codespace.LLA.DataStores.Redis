@@ -1,4 +1,4 @@
-﻿using N1_DocumentStorage;
+﻿using N2_JsonQuerying;
 using NRedisStack.RedisStackCommands;
 using StackExchange.Redis;
 
@@ -7,7 +7,5 @@ await using var redis = await ConnectionMultiplexer.ConnectAsync(conf);
 var redisDb = redis.GetDatabase();
 var jsonCommands = redisDb.JSON();
 
-await CrudOperations.RunExampleAsync(jsonCommands);
-await ArrayOperations.RunExampleAsync(jsonCommands);
-await ObjectMerging.RunExampleAsync(jsonCommands);
-await MemoryOptimization.RunExampleAsync(redisDb, jsonCommands);
+// await PathQueries.RunExampleAsync(jsonCommands);
+await ConditionalQueries.RunExampleAsync(jsonCommands);

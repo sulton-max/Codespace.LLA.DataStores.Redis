@@ -51,8 +51,13 @@ ITimeSeriesCommands ts = db.TS();
 
 ### Document Storage
 - [**CRUD operations**](../src/N1_DocumentStorage/CrudOperations.cs)
-- [**Object merging**](../src/Json/DocumentStorage/ObjectMerging.cs)
+  Shows how to create, read, update, and delete documents and their specific fields.
+- [**Object merging**](../src/N1_DocumentStorage/ObjectMerging.cs)
+  Demonstrates merging a new JSON object into an existing document.
 - [**Array manipulation**](../src/N1_DocumentStorage/ArrayOperations.cs) _Note: Array operations use string without JSON format_
+  Illustrates how to append, pop, and check the size of arrays within a document.
+- [**Memory optimization**](../src/N1_DocumentStorage/MemoryOptimization.cs)
+  Compares memory usage of nested JSON objects versus serialized strings.
 
 - [**Memory optimization**](../src/Json/DocumentStorage/MemoryOptimization.cs)
 

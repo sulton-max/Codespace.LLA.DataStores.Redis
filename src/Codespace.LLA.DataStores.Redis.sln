@@ -4,6 +4,22 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "N1_JsonOperations", "N1_Jso
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "N1_DocumentStorage", "N1_DocumentStorage\N1_DocumentStorage.csproj", "{3D865C4B-8153-4345-8225-06E9D1366890}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "N2_JsonQuerying", "N2_JsonQuerying\N2_JsonQuerying.csproj", "{9CBE1CE9-414C-4E83-A412-6E23CB43D9E0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{D388987B-361C-4102-8599-C390D7C18FE8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "N2_JsonIndexing", "N2_JsonIndexing", "{DFCB1C97-5090-4A92-B701-0EBEF0BD1818}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "N3_VectorIndexing", "N3_VectorIndexing", "{6E8FA34C-8F03-4CBF-812C-98A3ADA43209}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "N4_DataTypes", "N4_DataTypes", "{FDE948B4-5F86-4039-A8E1-F88BED4A04F3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "N5_Components", "N5_Components", "{DCFB855D-3415-4304-A9E3-25FA3D938313}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "N6_RedisPatterns", "N6_RedisPatterns", "{F76D002E-E87E-4937-BE80-8AE2091639AE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "N7_CachingPatterns", "N7_CachingPatterns", "{ECFAF925-BC83-49EE-8487-8B22AB7F351C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -11,11 +27,20 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{3D865C4B-8153-4345-8225-06E9D1366890} = {6ECF5114-DD5B-4300-8CBE-B5EF4E97C685}
+		{9CBE1CE9-414C-4E83-A412-6E23CB43D9E0} = {6ECF5114-DD5B-4300-8CBE-B5EF4E97C685}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{3D865C4B-8153-4345-8225-06E9D1366890}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{3D865C4B-8153-4345-8225-06E9D1366890}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3D865C4B-8153-4345-8225-06E9D1366890}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3D865C4B-8153-4345-8225-06E9D1366890}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9CBE1CE9-414C-4E83-A412-6E23CB43D9E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CBE1CE9-414C-4E83-A412-6E23CB43D9E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CBE1CE9-414C-4E83-A412-6E23CB43D9E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CBE1CE9-414C-4E83-A412-6E23CB43D9E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D388987B-361C-4102-8599-C390D7C18FE8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D388987B-361C-4102-8599-C390D7C18FE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D388987B-361C-4102-8599-C390D7C18FE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D388987B-361C-4102-8599-C390D7C18FE8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
